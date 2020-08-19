@@ -3,8 +3,7 @@ const express=require('express')
 const hbs =require('hbs')
 const forecast=require('./utils/forecast')
 const geocode= require('./utils/geocode')
-console.log(__dirname)
-console.log(path.join(__dirname,'../public'))
+
 
 
 const app=express()
@@ -46,19 +45,7 @@ app.get('/help/*',(req,res)=>{
 })
 
 
-// app.get('',(req,res)=>{
-//     res.send({
-//         name:'shashank',
-//         title:'kumar'
-//     })
-// })
 
-// app.get('/help',(req,res)=>{
-//     res.send('Help page')
-// })
-// app.get('/about',(req,res)=>{
-//     res.send('<h1>Title</h1>')
-// })
 app.get('/weather',(req,res)=>{
     if(!req.query.address){
         return res.send({
