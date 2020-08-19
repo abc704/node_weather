@@ -8,6 +8,7 @@ console.log(path.join(__dirname,'../public'))
 
 
 const app=express()
+const port=process.envPORT || 3000
 
 const publicDirectory=path.join(__dirname,'../public')
 const viewPath=path.join(__dirname,'../templates/views')
@@ -121,7 +122,7 @@ app.get("*",(req,res)=>{
 
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is up')
 })
 
