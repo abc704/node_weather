@@ -9,7 +9,7 @@ const forecast=(latitude,long,callback)=>{
               callback('couldnt find the valid result',undefined)
             }
             else{
-                callback(undefined,'It is currently'+body.current.temperature+'degree out'+body.current.feelslike)
+                callback(undefined,'It is currently '+body.current.temperature+'degress .it feels like'+body.current.feelslike+'degress out.The Humidity is'+body.current.humidity+"%")
             }
             })
 
